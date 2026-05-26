@@ -11,9 +11,9 @@ app.use(express_1.default.json());
 app.post("/", async (req, res) => {
     const data = req.body;
     console.log("-----------------------------");
-    console.log(data);
+    console.log(req.body);
     console.log("-----------------------------");
-    return res.status(202).json({ data });
+    return res.status(202).json({ "data_sent":req.body});
 });
 app.listen(3000);
 //# sourceMappingURL=index.js.map
